@@ -62,4 +62,6 @@ let char : Character = "A"
 
 let bool : Bool = true
 
+print("Count", lang.count)
+
 
