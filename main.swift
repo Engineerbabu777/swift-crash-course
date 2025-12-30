@@ -187,3 +187,18 @@ while true {
 repeat {
     print("Hello World!")
 } while false
+
+
+
+outer: for i in 1...3{
+       print("Outer i =", i)
+    for j in 1...3{
+        if j == 2 { 
+            print("Found one!")
+            continue outer
+             }
+        print(j)
+    }
+    // print(i)
+    print("Done with inner loop.") // will never be printed!
+}
