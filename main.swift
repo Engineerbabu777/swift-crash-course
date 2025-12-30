@@ -89,3 +89,12 @@ if let index = numbers.firstIndex(of: 3) {
 print(index)
 
 
+var dict: [String: Int] = ["one": 1, "two": 2]
+dict["three"] = 3 // ["one": 1, "two": 2, "three": 3]
+
+print(dict)
+// print(dict["one"]) // Optional(1)
+
+for (key,value) in dict{
+	print(key,"=",value)
+}
