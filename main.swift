@@ -119,3 +119,24 @@ if temp > 30 {
 	print("The weather is nice.")
 }
 
+let num22 = "44"
+
+if let newNum = Int(num22){
+	if newNum % 2 == 0 {
+		print(newNum,"  is even")
+	}else{
+		print(newNum,"is odd")
+	}
+	print("Not an integer ", num22)
+}
+
+func printSqr(){
+    guard let n = Int("nope") else{
+        print("not a number ")
+        return
+    }
+
+    print(n*n)
+}
+
+printSqr()
