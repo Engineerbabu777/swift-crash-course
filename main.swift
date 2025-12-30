@@ -202,3 +202,11 @@ outer: for i in 1...3{
     // print(i)
     print("Done with inner loop.") // will never be printed!
 }
+
+
+// defer expale!
+defer{
+    print("Defer block executed!")
+}
+
+print("End of program.")
