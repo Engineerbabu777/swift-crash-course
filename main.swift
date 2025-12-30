@@ -252,3 +252,11 @@ func getMinMax(numbers:[Int]) -> (min:Int,max:Int) {
 
 let result = getMinMax(numbers: [1,2,3])
 print(result.min,result.max)
+
+// reduce!
+func average(numbers:[Double])->Double{
+    return numbers.reduce(0,+)/Double(numbers.count)
+}
+
+print(average(numbers: [1.0,2.0,3.0]))
+
