@@ -377,3 +377,17 @@ struct Point {
 var point = Point(x: 0, y: 0)
 point.moveBy(x: 10, y: -5)
 print(point.x, point.y) // Output: 10 -5
+
+
+
+// Subscripts!
+struct TimesTable {
+    let multiplier: Int
+
+    subscript(index: Int) -> Int {
+        return multiplier * index
+    }
+}
+
+let timesTable = TimesTable(multiplier: 3)
+print(timesTable[5]) // Output: 15
