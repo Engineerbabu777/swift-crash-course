@@ -205,8 +205,26 @@ outer: for i in 1...3{
 
 
 // defer expale!
-defer{
-    print("Defer block executed!")
+// defer{
+//     print("Defer block executed!")
+// }
+
+// print("End of program.")
+
+
+
+// Functions!
+func sayHello(){
+    print("Hello from func")
 }
 
-print("End of program.")
+ sayHello()
+
+
+ func add(a:Int,b:Int)->Int{
+	return a+b
+}
+
+let ans = add(a: 10, b: 20)
+
+print(ans)
