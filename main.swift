@@ -105,3 +105,17 @@ var unique : Set<Int> = Set([1,2,3])
 unique.insert(4)
 unique.remove(1)
 print(unique.contains(11))
+
+
+
+// control flow!
+let temp = 22
+
+if temp > 30 {
+	print("It's hot!")
+} else if temp < 10 {
+	print("It's cold!")
+} else {
+	print("The weather is nice.")
+}
+
