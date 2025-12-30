@@ -98,3 +98,10 @@ print(dict)
 for (key,value) in dict{
 	print(key,"=",value)
 }
+
+
+// sets!
+var unique : Set<Int> = Set([1,2,3])
+unique.insert(4)
+unique.remove(1)
+print(unique.contains(11))
