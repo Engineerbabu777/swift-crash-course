@@ -140,3 +140,14 @@ func printSqr(){
 }
 
 printSqr()
+
+let score = 75
+
+switch score {
+case 0...50:
+    print("You failed!")
+case 51...80:
+    print("You passed!")
+default:
+    print("Invalid score!")
+}
