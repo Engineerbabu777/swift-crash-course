@@ -260,3 +260,18 @@ func average(numbers:[Double])->Double{
 
 print(average(numbers: [1.0,2.0,3.0]))
 
+
+
+// pass by refrence!
+func swapValues<T>(_ a: inout T,_ b: inout T){
+	let temp = a
+	a=b
+	b=temp
+}
+
+var a = 10;
+var b = 20;
+
+print(a,b)
+swapValues(&a,&b)
+print(a,b)
