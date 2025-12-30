@@ -51,3 +51,5 @@ This is multiline string.
 
 
 
+print("Good day \(simpleString)")
+print("Good day ",simpleString)
