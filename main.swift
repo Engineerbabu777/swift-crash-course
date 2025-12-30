@@ -275,3 +275,31 @@ var b = 20;
 print(a,b)
 swapValues(&a,&b)
 print(a,b)
+
+
+// clousers!
+let greet22 = { (a:String) -> Void in
+    print("Hello,",a)
+    print("Hello World!")
+}
+
+greet22(":")
+
+
+// ENUMS!
+enum Direction{
+	case north,south,east,west
+}
+
+let dir = Direction.north
+
+print(dir)
+
+enum Result{
+	case success(Int)
+	case failure(String)
+}
+
+let res = Result.success(100)
+
+print(res)
