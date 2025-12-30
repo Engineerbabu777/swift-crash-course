@@ -303,3 +303,77 @@ enum Result{
 let res = Result.success(100)
 
 print(res)
+
+// weekdays!
+enum Weekday:Int,CaseIterable{
+	case monday=10,tuesday,wednesday,thursday,friday,saturday,sunday
+}
+
+for day in Weekday.allCases {
+    print("\(day) = \(day.rawValue)")
+}
+
+
+
+struct Person{
+	var firstName:String
+	var lastName:String
+}
+
+var person = Person(firstName: "John",lastName: "Doe")
+person.firstName = "Jane"
+print(person.firstName,person.lastName)
+
+
+class Teacher {
+    var name:String
+    var subject: String;
+
+    init(name:String,subject:String){
+        self.name=name
+        self.subject=subject
+    }
+
+}
+
+let teacher1 = Teacher(name: "Mr. Smith", subject: "Mathematics")
+let teacher2 = teacher1;
+
+teacher2.name = "Mrs. Johnson"
+
+print(teacher1.name,teacher2.name)
+print(teacher1 === teacher2) // true
+
+
+class Counter {
+     var count = 0
+
+    // increament!
+    func increment(by amount: Int) {
+        count += amount
+    }
+
+    // decreament!
+    func decrement(by amount: Int) {
+        count -= amount
+    }
+}
+
+let counter = Counter();
+counter.increment(by: 10)
+counter.decrement(by: 5)
+print(counter.count) // 5
+
+struct Point {
+    var x: Int
+    var y: Int
+
+    mutating func moveBy(x: Int, y: Int) {
+        self.x += x
+        self.y += y
+    }
+}
+
+var point = Point(x: 0, y: 0)
+point.moveBy(x: 10, y: -5)
+print(point.x, point.y) // Output: 10 -5
