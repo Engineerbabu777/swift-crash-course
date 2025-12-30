@@ -1,4 +1,7 @@
 
+
+// What is Foundation ?
+
 import Foundation
 
 // var n constants
@@ -30,9 +33,17 @@ print(pi);
 
 
 
+for number in 1..<5 {
+	print(number)
+}
 
 
 
+let simpleString = "String"
+
+let multilineString = """
+This is multiline string.
+"""
 
 
 
