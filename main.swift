@@ -65,3 +65,27 @@ let bool : Bool = true
 print("Count", lang.count)
 
 
+
+
+
+
+import Foundation
+
+var numbers: [Int] = [1, 2, 3]
+numbers.append(4) // [1, 2, 3, 4]
+
+numbers.remove(at: 0) // [2, 3, 4]
+numbers.insert(0, at: 0) // [0, 2, 3, 4]
+
+let firstNumber = numbers.first // Optional(0)
+let lastNumber = numbers.last // Optional(4)
+
+if let index = numbers.firstIndex(of: 3) {
+    print(index)
+    print(numbers[index]) // 3
+	numbers[index] = 5 // [0, 2, 5, 4]
+}
+
+print(index)
+
+
