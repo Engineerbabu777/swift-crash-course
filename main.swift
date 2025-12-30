@@ -228,3 +228,27 @@ func sayHello(){
 let ans = add(a: 10, b: 20)
 
 print(ans)
+
+// un- named parameters!
+
+func greet(_ name:String, _ greeting:String){
+    print("\(greeting), \(name)!")
+}
+
+greet("John","Welcome")
+
+// default values!
+func greet(name:String="Guest"){
+    print("Hello, \(name)! Welcome!")
+}
+
+greet()
+
+
+// get min max!
+func getMinMax(numbers:[Int]) -> (min:Int,max:Int) {
+    return (numbers.min()!,numbers.max()!)
+}
+
+let result = getMinMax(numbers: [1,2,3])
+print(result.min,result.max)
