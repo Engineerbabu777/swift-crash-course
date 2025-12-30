@@ -53,3 +53,13 @@ This is multiline string.
 
 print("Good day \(simpleString)")
 print("Good day ",simpleString)
+
+
+let lang : String = "Swift"
+let version : Double = 5.6
+
+let char : Character = "A"
+
+let bool : Bool = true
+
+
