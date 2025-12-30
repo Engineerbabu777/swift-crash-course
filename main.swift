@@ -151,3 +151,39 @@ case 51...80:
 default:
     print("Invalid score!")
 }
+
+let scoreTuple = (score: 85, bonusPoints: 10)
+
+switch scoreTuple {
+case (_, 5):
+    print("No points added.")
+case (let s, _):
+    print("Added \(s) points.")
+
+}
+
+
+let animals = ["dog", "cat", "bird"]
+for animal in animals {
+    print(animal)
+}
+
+// even numbers from 1 to 10
+for i in stride(from: 1, through: 10, by: 3) {
+    print(i)
+}
+
+let names = ["Alice", "Bob", "Charlie"]
+for (index, name) in names.enumerated() {
+    print("\(name) is at index \(index)")
+}
+
+// while and reap white!
+while true {
+    print("Hello World!")
+    break
+}
+
+repeat {
+    print("Hello World!")
+} while false
