@@ -493,3 +493,26 @@ if let roomCount = jhon.residence?.numberOfRooms {
 
 print(jhon.residence?.numberOfRooms)
 print(jhon.residence!.numberOfRooms)
+
+
+// ERROR HANDLING!
+enum ParseError: Error{
+    case notNumber
+}
+
+func convert(_ strr:String) throws -> Int{
+    guard let intVal = Int(strr)else{
+        throw ParseError.notNumber
+    }
+    return intVal
+}
+
+do{
+    let result = try convert("123A")
+    print(result)
+}catch ParseError.notNumber{
+    print("Conversion failed: Not a valid number.")
+}
+catch{
+    print(error.localizedDescription)
+}
