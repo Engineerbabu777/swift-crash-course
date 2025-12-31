@@ -1,6 +1,7 @@
 // What is Foundation ?
 
 import Foundation
+import Combine
 
 // var n constants
 
@@ -519,9 +520,25 @@ catch{
 
 
 // CONCURRENCY!
-Task {
-    try await Task.sleep(for:.seconds(2))
-    print("XXXXX!")
-}
+// Task {
+//     try await Task.sleep(for:.seconds(2))
+//     print("XXXXX!")
+// }
 
-RunLoop.main.run()
+// RunLoop.main.run()
+
+
+
+// Macro!
+// @Observable
+// class User {
+//     @Published var name: String = ""
+//     @Published var email: String = ""
+// }
+
+// let user = User()
+// user.$email.sink{newEmail in
+//     print("New Email:",newEmail)
+// }
+
+// user.email = "john@example.com"
