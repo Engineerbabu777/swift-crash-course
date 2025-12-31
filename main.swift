@@ -1,7 +1,7 @@
 // What is Foundation ?
 
-import Foundation
 import Combine
+import Foundation
 
 // var n constants
 
@@ -410,44 +410,33 @@ class Animal {
 
 class Dog: Animal {
 
-//   override func speak() {
-//     super.speak()
-//     print("Dog barks!")
-//   }
+  //   override func speak() {
+  //     super.speak()
+  //     print("Dog barks!")
+  //   }
 }
 
 // create obj!
 let dog = Dog(name: "Buddy")
-dog.speak()  
-
-
+dog.speak()
 
 final class Bird: Animal {
-    override func speak(){
-        print("Bird chirps!")
-    }
+  override func speak() {
+    print("Bird chirps!")
+  }
 }
-
-
 
 // class Pecok: Bird {
 
-
 // }
 
-
 if dog is Animal {
-    print("dog is an instance of Animal")
+  print("dog is an instance of Animal")
 }
 
-
-
-
-
-
 struct Student {
-    var name: String
-    var age: Int 
+  var name: String
+  var age: Int
 }
 
 let student1 = Student(name: "John Doe", age: 20)
@@ -456,68 +445,65 @@ print(student1.age)
 
 // class and convenicnce init!
 class Rectangle {
-    var width: Double
-    var height: Double
+  var width: Double
+  var height: Double
 
-    init(width: Double, height: Double){
-        self.width = width
-        self.height = height
-    }
+  init(width: Double, height: Double) {
+    self.width = width
+    self.height = height
+  }
 
-    convenience init(sideLength: Double){
-        self.init(width: sideLength,height:sideLength)
-    }
+  convenience init(sideLength: Double) {
+    self.init(width: sideLength, height: sideLength)
+  }
 }
 
 class Residence {
-    var numberOfRooms: Int = 1
+  var numberOfRooms: Int = 1
 }
 
 // optional chaining!
 class Person2 {
-    var residence: Residence?
+  var residence: Residence?
 
-    init(residence: Residence?) {
-        self.residence = residence
-    }
+  init(residence: Residence?) {
+    self.residence = residence
+  }
 }
 
 let residence = Residence()
 
-let jhon = Person2(residence:residence)
+let jhon = Person2(residence: residence)
 
 if let roomCount = jhon.residence?.numberOfRooms {
-    print("John's residence has \(roomCount) rooms.")
-}else{
-    print("Unable to retrieve the number of rooms.")
+  print("John's residence has \(roomCount) rooms.")
+} else {
+  print("Unable to retrieve the number of rooms.")
 }
 
 print(jhon.residence?.numberOfRooms)
 print(jhon.residence!.numberOfRooms)
 
-
 // ERROR HANDLING!
-enum ParseError: Error{
-    case notNumber
+enum ParseError: Error {
+  case notNumber
 }
 
-func convert(_ strr:String) throws -> Int{
-    guard let intVal = Int(strr)else{
-        throw ParseError.notNumber
-    }
-    return intVal
+func convert(_ strr: String) throws -> Int {
+  guard let intVal = Int(strr) else {
+    throw ParseError.notNumber
+  }
+  return intVal
 }
 
-do{
-    let result = try convert("123A")
-    print(result)
-}catch ParseError.notNumber{
-    print("Conversion failed: Not a valid number.")
+do {
+  let result = try convert("123A")
+  print(result)
+} catch ParseError.notNumber {
+  print("Conversion failed: Not a valid number.")
+} catch {
+  print(error.localizedDescription)
 }
-catch{
-    print(error.localizedDescription)
-}
-
 
 // CONCURRENCY!
 // Task {
@@ -526,8 +512,6 @@ catch{
 // }
 
 // RunLoop.main.run()
-
-
 
 // Macro!
 // @Observable
@@ -542,3 +526,21 @@ catch{
 // }
 
 // user.email = "john@example.com"
+
+// PROTOCOL!
+protocol Describable {
+
+  func describe() -> String
+
+}
+
+struct Dog22 : Describable {
+
+    func describe() -> String {
+        return "This is a dog."
+    }
+    
+}
+
+let kuta = Dog22();
+kuta.describe();
