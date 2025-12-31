@@ -544,3 +544,16 @@ struct Dog22 : Describable {
 
 let kuta = Dog22();
 kuta.describe();
+
+// Generics!
+func add<T:Numeric>(a: T, b: T) -> T {
+  return a + b
+}
+
+// use generic!
+let aaa = add(a: 10, b: 20)
+print(aaa)
+// add(a: "Hello", b: "World")
+let bbb = add(a: 10.5, b: 20.5)
+print(bbb)
+
