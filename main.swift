@@ -418,3 +418,16 @@ class Dog: Animal {
 // create obj!
 let dog = Dog(name: "Buddy")
 dog.speak()  
+
+
+
+final class Bird: Animal {
+    override func Sound(){
+        print("Bird chirps!")
+    }
+}
+
+class Pecok: Bird {
+    
+
+}
