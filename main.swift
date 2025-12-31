@@ -422,12 +422,48 @@ dog.speak()
 
 
 final class Bird: Animal {
-    override func Sound(){
+    override func speak(){
         print("Bird chirps!")
     }
 }
 
-class Pecok: Bird {
-    
 
+
+// class Pecok: Bird {
+
+
+// }
+
+
+if dog is Animal {
+    print("dog is an instance of Animal")
+}
+
+
+
+
+
+
+struct Student {
+    var name: String
+    var age: Int 
+}
+
+let student1 = Student(name: "John Doe", age: 20)
+
+print(student1.age)
+
+// class and convenicnce init!
+class Rectangle {
+    var width: Double
+    var height: Double
+
+    init(width: Double, height: Double){
+        self.width = width
+        self.height = height
+    }
+
+    convenience init(sideLength: Double){
+        self.init(width: sideLength,height:sideLength)
+    }
 }
