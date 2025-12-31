@@ -467,3 +467,29 @@ class Rectangle {
         self.init(width: sideLength,height:sideLength)
     }
 }
+
+class Residence {
+    var numberOfRooms: Int = 1
+}
+
+// optional chaining!
+class Person2 {
+    var residence: Residence?
+
+    init(residence: Residence?) {
+        self.residence = residence
+    }
+}
+
+let residence = Residence()
+
+let jhon = Person2(residence:residence)
+
+if let roomCount = jhon.residence?.numberOfRooms {
+    print("John's residence has \(roomCount) rooms.")
+}else{
+    print("Unable to retrieve the number of rooms.")
+}
+
+print(jhon.residence?.numberOfRooms)
+print(jhon.residence!.numberOfRooms)
