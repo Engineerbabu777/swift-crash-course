@@ -516,3 +516,12 @@ do{
 catch{
     print(error.localizedDescription)
 }
+
+
+// CONCURRENCY!
+Task {
+    try await Task.sleep(for:.seconds(2))
+    print("XXXXX!")
+}
+
+RunLoop.main.run()
